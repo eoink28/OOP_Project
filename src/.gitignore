@@ -1,3 +1,4 @@
 .vscode/
 .lib/
+.bin/
 ##IGNORE THESE FILES WHEN COMMINGING TO GITHUB

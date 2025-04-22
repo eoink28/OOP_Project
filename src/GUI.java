@@ -16,9 +16,16 @@ public class GUI extends JFrame
     private JButton predicButton;
     private JLabel resultLabel;
 
+    //Predictor object that will handle prediction logic
+    //
+    public Predictor predictor;
+
     //Constructor for settuing up the window and the UI
-    public  GUI() 
+    public  GUI(Predictor predictor) 
     {
+
+        this.predictor = predictor;
+
         //Set window size and name
         //
         setTitle("Policey Predictor");
@@ -69,10 +76,19 @@ public class GUI extends JFrame
             String s_term = (String) TermBox.getSelectedItem();
             String s_area = (String) areaBox.getSelectedItem();
             
-            //ensure everyting is working at the moment
+            //Create an array of features to pass to the predictor
             //
-            resultLabel.setText("Chosen: " + s_clientType + ", " + s_coverage + ", " + s_term + ", " + s_area);
+            String[] features = { s_clientType, s_coverage, s_term, s_area };
+
+            //Get prediction result from the predictor
+            //
+            String prediction = predictor.predict(features);
+
+            //Display the result
+            //
+            resultLabel.setText("Prediction: " + prediction);
         });
-    }
     
+    }
+
 }

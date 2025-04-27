@@ -5,12 +5,14 @@ import java.util.*;
 public class Predictor
 {
     private List<String[]> data;
+    private Dataset dataset; // Save the dataset object for retraining
 
-    //Constructor stores the dataset
+    //Constructor stores the dataset and the original data
     //
-    public Predictor(List<String[]> data)
+    public Predictor(List<String[]> data, Dataset dataset)
     {
         this.data = data;
+        this.dataset = dataset;
     }
 
     //Predict method checks how many "yes" and "no" matches exist for the selected features
@@ -71,5 +73,12 @@ public class Predictor
     public void retrain(List<String[]> newData)
     {
         this.data = newData;
+    }
+
+    //Get the dataset to allow adding new rows
+    //
+    public Dataset getDataset()
+    {
+        return dataset;
     }
 }

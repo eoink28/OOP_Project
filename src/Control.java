@@ -10,7 +10,7 @@ public class Control
 
             //Create the predictor using the dataset
             //
-            Predictor predictor = new Predictor(dataset.getData());
+            Predictor predictor = new Predictor(dataset.getData(), dataset);
 
             //Pass predictor into GUI and display the window
             //

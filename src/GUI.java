@@ -5,7 +5,7 @@ import java.awt.*;    // Needed for layouts and fonts
 //
 public class GUI extends JFrame
 {
-    //JComboBoxes are used for selecting an input value
+    //JComboBoxes used for selecting an input value
     //
     private JComboBox<String> clientTypeBox;
     private JComboBox<String> coverageBox;
@@ -66,8 +66,8 @@ public class GUI extends JFrame
         //Create the result label and make it bigger
         //
         resultLabel = new JLabel("Prediction will show here");
-        resultLabel.setFont(new Font("Arial", Font.BOLD, 22));
-        resultLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        resultLabel.setFont(new Font("Arial", Font.BOLD, 22));//Setting font
+        resultLabel.setAlignmentX(Component.CENTER_ALIGNMENT);//Moving to middle of the window
 
         //Panel to hold all inputs at the top
         //

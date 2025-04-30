@@ -1,5 +1,5 @@
-import java.io.*;
-import java.util.*;
+import java.io.*; //Import java input/output
+import java.util.*; //import java utillity for arrays
 
 //This class reads the dataset from a CSV file
 //

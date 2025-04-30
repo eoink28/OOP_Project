@@ -1,6 +1,6 @@
 import java.util.*;
 
-//This class does a very basic yes/no prediction based on matching rows in the training data
+//This class does  very basic yes/no prediction based on matching rows in the training data
 //
 public class Predictor
 {

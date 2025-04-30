@@ -17,7 +17,7 @@ public class Dataset
 
         while ((line = reader.readLine()) != null)
         {
-            //Skip the header row (optional but safe)
+            //Skip the header row 
             //
             if (line.startsWith("ClientType"))
             {
